@@ -1,0 +1,27 @@
+﻿<Window x:Class="HelloWorld.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWorld"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+
+    <StackPanel>
+
+        <TextBlock x:Name="uxNameLabel">Enter Name:</TextBlock>
+        <TextBox x:Name="uxName" TextChanged="ValidateForm"/>
+        
+        <TextBlock x:Name="uxPasswordLabel">Enter Password:</TextBlock>
+        <TextBox x:Name="uxPassword" TextChanged="ValidateForm"/>
+        <Button x:Name="uxSubmit" Click="uxSubmit_Click" Content="Submit" IsEnabled="False"/>
+        <Button>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="images/ic_thumb_up_black_24dp_2x.png" Margin="5"/>
+                <TextBlock Text="Thumbs Up" VerticalAlignment="Center" Margin="5"/>
+            </StackPanel>
+
+        </Button>
+
+    </StackPanel>
+</Window>
