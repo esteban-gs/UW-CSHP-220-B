@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,33 @@ namespace HelloWorld
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        /// use this for next assignment: https://www.wpf-tutorial.com/basic-controls/the-passwordbox-control/
+
+        private Models.User user = new Models.User();
+
         public MainWindow()
         {
             InitializeComponent();
+            // using the inMemory entity
+            uxMainWindowContainer.DataContext = user;
+
+            uxContainer.DataContext = user;
+            // using the Sample Context to access DB with EF
+            var sample = new SampleContext();
+            sample.User.Load();
+            var users = sample.User.Local.ToObservableCollection();
+            uxList.ItemsSource = users;
         }
 
         private void uxSubmit_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"Thnx for submitting. Password: {uxPassword.Text}");
+            MessageBox.Show("Submitting password:" + uxPassword.Text);
+
+            var window = new SecondWindow();
+            Application.Current.MainWindow = window;
+            Close();
+            window.Show();
         }
 
         private void ValidateForm(object sender, TextChangedEventArgs e)

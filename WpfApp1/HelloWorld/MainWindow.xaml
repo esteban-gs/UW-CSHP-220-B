@@ -5,15 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelloWorld"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525"
+        x:Name="uxMainWindowContainer">
 
-    <StackPanel>
+    <StackPanel x:Name="uxContainer">
+        <ListView x:Name="uxList">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding UserName}" Header="User Name" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding UserPassword}" Header="Password" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
-        <TextBlock x:Name="uxNameLabel">Enter Name:</TextBlock>
-        <TextBox x:Name="uxName" TextChanged="ValidateForm"/>
-        
+        <TextBlock>Enter Name:</TextBlock>
+
+        <TextBox x:Name="uxName" 
+                Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" TextChanged="ValidateForm">
+        </TextBox>
+        <Label x:Name="uxNameError" 
+            Content="{Binding NameError, UpdateSourceTrigger=PropertyChanged}"></Label>
+
         <TextBlock x:Name="uxPasswordLabel">Enter Password:</TextBlock>
-        <TextBox x:Name="uxPassword" TextChanged="ValidateForm"/>
+        <TextBox x:Name="uxPassword" 
+                 Text="{Binding Password, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" TextChanged="ValidateForm"/>
+        <Label x:Name="uxPasswordError"  
+            Content="{Binding PasswordError, UpdateSourceTrigger=PropertyChanged}"></Label>
+
+
         <Button x:Name="uxSubmit" Click="uxSubmit_Click" Content="Submit" IsEnabled="False"/>
         <Button>
             <StackPanel Orientation="Horizontal">
@@ -21,6 +40,13 @@
                 <TextBlock Text="Thumbs Up" VerticalAlignment="Center" Margin="5"/>
             </StackPanel>
 
+        </Button>
+
+        <Button>
+            <StackPanel>
+                <CheckBox>Click Me!</CheckBox>
+                <CheckBox>Click Me!</CheckBox>
+            </StackPanel>
         </Button>
 
     </StackPanel>
