@@ -12,12 +12,12 @@
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Name}">
                         <GridViewColumn.Header>
-                            <GridViewColumnHeader Tag="Name" Click="uxListNameColumHeader_Click">Name</GridViewColumnHeader>
+                            <GridViewColumnHeader Tag="Name" Click="UxListColumHeader_Click">Name</GridViewColumnHeader>
                         </GridViewColumn.Header>
                     </GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Password}">
                         <GridViewColumn.Header>
-                            <GridViewColumnHeader Tag="Password" Click="uxListPasswordColumHeader_Click">Password</GridViewColumnHeader>
+                            <GridViewColumnHeader Tag="Password" Click="uxListColumHeader_Click">Password</GridViewColumnHeader>
                         </GridViewColumn.Header>
                     </GridViewColumn>
                 </GridView>

@@ -37,23 +37,15 @@ namespace Homework3
 
         }
 
-        private void uxListNameColumHeader_Click(object sender, RoutedEventArgs e)
-        {
-            uxList_SortingViewHelper(nameof(User.Password), ListSortDirection.Ascending);
-        }
-
-        private void uxListPasswordColumHeader_Click(object sender, RoutedEventArgs e)
-        {
-            uxList_SortingViewHelper(nameof(User.Name), ListSortDirection.Ascending);
-        }
-
-
-        // Shared functionality for uxList
-        private void uxList_SortingViewHelper(string propName, ListSortDirection direction)
+        private void UxListColumHeader_Click(object sender, RoutedEventArgs e)
         {
             CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(uxList.ItemsSource);
             uxList.Items.SortDescriptions.Clear();
-            view.SortDescriptions.Add(new SortDescription(propName, direction));
+
+            GridViewColumnHeader column = (sender as GridViewColumnHeader);
+            string sortBy = column.Tag.ToString();
+
+            view.SortDescriptions.Add(new SortDescription(sortBy, ListSortDirection.Ascending));
         }
     }
 }
