@@ -17,7 +17,7 @@
                     </GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Password}">
                         <GridViewColumn.Header>
-                            <GridViewColumnHeader Tag="Password" Click="uxListColumHeader_Click">Password</GridViewColumnHeader>
+                            <GridViewColumnHeader Tag="Password" Click="UxListColumHeader_Click">Password</GridViewColumnHeader>
                         </GridViewColumn.Header>
                     </GridViewColumn>
                 </GridView>

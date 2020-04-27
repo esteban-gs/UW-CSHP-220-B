@@ -8,9 +8,10 @@
         Title="ComboWindow" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <ComboBox x:Name="uxComboBox"
+            <ListBox x:Name="uxComboBox"
                 DisplayMemberPath="UserName"
-                SelectionChanged="uxComboBox_SelectionChanged" />
+                SelectionChanged="uxComboBox_SelectionChanged" 
+                     Height="100"/>
 
             <Grid x:Name="uxGrid">
                 <Grid.RowDefinitions>
