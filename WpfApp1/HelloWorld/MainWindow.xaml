@@ -14,6 +14,7 @@
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding UserName}" Header="User Name" Width="100"/>
                     <GridViewColumn DisplayMemberBinding="{Binding UserPassword}" Header="Password" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding UserPassword}" Header="Password" Width="100"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -31,7 +32,6 @@
                  Text="{Binding Password, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" TextChanged="ValidateForm"/>
         <Label x:Name="uxPasswordError"  
             Content="{Binding PasswordError, UpdateSourceTrigger=PropertyChanged}"></Label>
-
 
         <Button x:Name="uxSubmit" Click="uxSubmit_Click" Content="Submit" IsEnabled="False"/>
         <Button>
