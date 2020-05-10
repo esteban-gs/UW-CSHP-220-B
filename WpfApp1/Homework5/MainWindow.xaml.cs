@@ -1,19 +1,8 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Homework5
 {
@@ -25,6 +14,9 @@ namespace Homework5
         private static bool _xTurn;
         private List<Coordinates> _coordListX = new List<Coordinates>();
         private List<Coordinates> _coordListO = new List<Coordinates>();
+
+        List<Coordinates> currentPlayerCoords = null;
+
 
         public MainWindow()
         {
@@ -48,23 +40,18 @@ namespace Homework5
             var y = Int32.Parse(colPlacing[1]);
 
             char currentPlayer = GetCurrentPlayer();
-
-            List<Coordinates> currentPlayerCoords = null;
-
+            button.Content = currentPlayer;
 
             if (_xTurn)
             {
-                button.Content = currentPlayer;
-                _coordListX.Add(CoordinateFactory.New(x, y));
                 currentPlayerCoords = _coordListX;
             }
             else
             {
-                button.Content = currentPlayer;
-                _coordListO.Add(CoordinateFactory.New(x, y));
                 currentPlayerCoords = _coordListO;
             }
 
+            currentPlayerCoords.Add(CoordinateFactory.New(x, y));
 
             var winnerDetails = EvaluateWinner(currentPlayer, currentPlayerCoords);
 
