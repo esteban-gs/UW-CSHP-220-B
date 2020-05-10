@@ -29,7 +29,8 @@ namespace HelloWorld
             var checkBox = (CheckBox)sender;
             if (checkBox.IsChecked.Value)
             {
-                MessageBox.Show($"Local Checked");
+                var msg = Application.Current.FindResource("LocalChecked").ToString();
+                MessageBox.Show(msg);
             }
             else
             {

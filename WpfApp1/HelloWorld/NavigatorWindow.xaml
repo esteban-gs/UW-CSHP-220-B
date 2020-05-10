@@ -8,9 +8,7 @@
         Title="Navigator" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <TextBox x:Name="uxTextBox">
-            
-            </TextBox>
+            <TextBox x:Name="uxTextBox" />
             <Button x:Name="uxGoButton" Click="uxGoButton_Click" Content="Navigate to Url"/>
         </StackPanel>
 

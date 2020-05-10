@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LitstsDemo", "LitstsDemo\Li
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework3", "Homework3\Homework3.csproj", "{7E7E3855-79B3-4A72-B3EC-C127C4B1BFEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework4", "Homework4\Homework4.csproj", "{3378933E-B7CB-4335-8E5A-25CD51974B0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework4", "Homework4\Homework4.csproj", "{3378933E-B7CB-4335-8E5A-25CD51974B0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework5", "Homework5\Homework5.csproj", "{58786597-4CC5-4D30-AA37-153994058969}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3378933E-B7CB-4335-8E5A-25CD51974B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3378933E-B7CB-4335-8E5A-25CD51974B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3378933E-B7CB-4335-8E5A-25CD51974B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58786597-4CC5-4D30-AA37-153994058969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58786597-4CC5-4D30-AA37-153994058969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58786597-4CC5-4D30-AA37-153994058969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58786597-4CC5-4D30-AA37-153994058969}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

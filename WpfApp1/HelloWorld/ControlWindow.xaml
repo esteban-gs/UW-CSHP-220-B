@@ -17,12 +17,19 @@
             <Hyperlink NavigateUri="http://www.microsoft.com" 
                 RequestNavigate="uxNavigator_RequestNavigate">Microsoft.com</Hyperlink>
         </TextBlock>
-        <RadioButton Content="Option 1" GroupName="one"></RadioButton >
-        <RadioButton Content="Option 2" GroupName="one"></RadioButton>
-            
+        <Border BorderThickness="5" BorderBrush="Gray">
+            <StackPanel>
+                <RadioButton Content="Option 1" GroupName="one"></RadioButton >
+                <RadioButton Content="Option 2" GroupName="one"></RadioButton>
+            </StackPanel>
+        </Border>
 
-        <RadioButton Content="Option A" GroupName="two"></RadioButton>
-        <RadioButton Content="Option B" GroupName="two"></RadioButton>
+        <Border BorderThickness="5" BorderBrush="Gray">
+            <StackPanel>
+                <RadioButton Content="Option A" GroupName="two"></RadioButton>
+                <RadioButton Content="Option B" GroupName="two"></RadioButton>
+            </StackPanel>
+        </Border>
 
         <Slider x:Name="uxSlider"
            Minimum="0" Maximum="100" TickPlacement="BottomRight" TickFrequency="5" />
